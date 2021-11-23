@@ -18,6 +18,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".InFolderActivity"
+            android:label="폴더 내 액티비티" />
+
+        <activity android:name=".AddTimerActivity"
+            android:label="타이머 추가 액티비티" />
     </application>
 
 </manifest>
