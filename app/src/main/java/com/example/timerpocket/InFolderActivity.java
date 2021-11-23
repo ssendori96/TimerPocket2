@@ -28,6 +28,10 @@ public class InFolderActivity extends AppCompatActivity {
             }
         });
 
+        Intent inIntent = getIntent();
+        String timerName = inIntent.getStringExtra("TimerName");
+
+
 
 
 
