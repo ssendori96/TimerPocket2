@@ -9,6 +9,8 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+
 public class InFolderActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +20,7 @@ public class InFolderActivity extends AppCompatActivity {
         setContentView(R.layout.in_folder);
 
         Button btnTimerAdd = (Button) findViewById(R.id.btnTimerAdd);
-        ListView list = (ListView) findViewById(R.id.listTimer);
+
 
         btnTimerAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,6 +32,22 @@ public class InFolderActivity extends AppCompatActivity {
 
         Intent inIntent = getIntent();
         String timerName = inIntent.getStringExtra("TimerName");
+        int hour = inIntent.getIntExtra("Hour", 0);
+        int minute = inIntent.getIntExtra("Minute", 0);
+        int second = inIntent.getIntExtra("Second", 0);
+        boolean alr;
+
+
+
+        final ArrayList<String> midList = new ArrayList<String>();
+        ListView list = (ListView) findViewById(R.id.listTimer);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, midList);
+        list.setAdapter(adapter);
+
+
+
 
 
 
